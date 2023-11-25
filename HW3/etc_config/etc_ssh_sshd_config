@@ -1,0 +1,12 @@
+# Add these in /etc/ssh/sshd_config
+Subsystem	sftp	internal-sftp -d /home/sftp -f LOCAL0 -l INFO
+Match Group sftp-only
+	X11Forwarding no
+	ForceCommand internal-sftp -u 0007 -f LOCAL0 -l INFO
+	ChrootDirectory /home/sftp
+	DisableForwarding yes
+Match User anonymous
+	X11Forwarding no
+	ForceCommand internal-sftp -u 0007 -R -f LOCAL0 -l INFO
+	ChrootDirectory /home/sftp
+	DisableForwarding yes

@@ -1,0 +1,3 @@
+# Add these in /etc/syslog.conf
+local0.*					/var/log/sftp.log
+*.*						/var/log/all.log
