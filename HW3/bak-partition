@@ -1,3 +1,5 @@
 #!/bin/sh
+# $1: geom-disk
+# $2: partition-label
 gpart create -s GPT "$1"
 gpart add -t freebsd-zfs -l "$2" "$1"
