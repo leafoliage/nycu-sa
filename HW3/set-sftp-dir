@@ -1,0 +1,37 @@
+#!/bin/sh
+
+SFTP_DIR="/home/sftp"
+PUB_DIR="$SFTP_DIR/public"
+HID_DIR="$SFTP_DIR/hidden"
+#DEV_DIR="$SFTP_DIR/dev"
+
+# public
+echo "> sftp/public"
+chown sysadm:sysadm "$PUB_DIR"
+chmod a+rwx,+t "$PUB_DIR"
+ls -al "$PUB_DIR"
+echo 
+
+# hidden
+echo ">sftp/hidden"
+chown sysadm:sftp "$HID_DIR"
+chmod 771 "$HID_DIR"
+
+if [ ! -e "$HID_DIR/treasure" ]; then
+    mkdir "$HID_DIR/treasure"
+fi
+chown sysadm:sftp "$HID_DIR/treasure"
+chmod 775 "$HID_DIR/treasure"
+
+if [ ! -e "$HID_DIR/treasure/secret" ]; then
+    touch "$HID_DIR/treasure/secret"
+fi
+chown sysadm:sftp "$HID_DIR/treasure"
+chmod 774 "$HID_DIR/treasure/secret"
+
+if [ ! -e "$HID_DIR/.exe" ]; then
+    mkdir "$HID_DIR/.exe"
+fi
+chown sysadm:sftp "$HID_DIR/.exe"
+
+ls -al "$HID_DIR"

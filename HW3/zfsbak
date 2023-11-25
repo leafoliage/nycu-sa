@@ -1,0 +1,177 @@
+#!/bin/sh
+
+help="Usage:
+- create: zfsbak DATASET [ROTATION_CNT]
+- list: zfsbak -l|--list [DATASET|ID|DATASET ID...]
+- delete: zfsbak -d|--delete [DATASET|ID|DATASET ID...]
+- export: zfsbak -e|--export DATASET [ID]
+- import: zfsbak -i|--import FILENAME DATASET"
+
+zfsbak_list_util() {
+    list_args="-o name,creation -s creation -t snapshot -r -Hp"
+    #list_args="-o name,creation -s creation -t snapshot -Hp"
+    prev_time=0
+    prev_name=""
+    zfs list $list_args | while read name time; do 
+        case $name in *"$prev_name/"*)
+            if [ $prev_time -eq $time ]; then continue; fi
+            ;;
+        esac
+        case $name in "$1"*) 
+            case $name in *"@zfsbak_"*) echo $name ;; esac
+            ;; 
+        esac
+        prev_name=`echo $name | awk -F'@' '{ print $1 }'`
+        prev_time=$time
+    done
+}
+
+zfsbak_list_util_rev() {
+    zfsbak_list_util $1 | tail -r
+}
+
+# args - 1:snapshot_fullname
+list_descendants() {
+    list_args="-o name,creation -s creation -t snapshot -r -Hp"
+    tgt_name=`echo $1 | cut -d '@' -f 1`
+    tgt_time=`echo $1 | cut -d '_' -f 2`
+    zfs list $list_args $tgt_name | while read name time; do 
+        case $name in "$tgt_name"*) 
+            case $name in *"@zfsbak_$tgt_time"*) 
+                echo $name
+                ;;
+            esac
+            ;; 
+        esac
+    done
+}
+
+shift_util() {
+    _exp_tgt=$1
+    shift $_exp_tgt 2>/dev/null
+    echo $1
+}
+
+# args - 1:index, 2:snap_name
+zfsbak_list_snap_util() {
+    _list=`zfsbak_list_util $2`
+    _snap=`shift_util $1 $_list`
+    echo $_snap
+}
+
+zfsbak_list() {
+    awk_func='{ print NR"\t"$1"\t\t"$3 }'
+    printf "ID\tDATASET\t\tTIME\n"
+    if [ -z $1 ]; then
+        zfsbak_list_util | awk -F'[@_]' "$awk_func"
+    elif [ -z $2 ] && [ $1 -eq $1 ] 2>/dev/null; then
+        #awk_func2='{ print "\t"$1"\t\t"$3 }'
+        #zfsbak_list_snap_util $1 | awk -F'[@_]' "$awk_func"
+        zfsbak_list_util | awk -F'[@_]' -v id=$1 '{ if (NR==id) print NR"\t"$1"\t\t"$3 }'
+    elif [ -z $2 ]; then
+        zfsbak_list_util $1 | awk -F'[@_]' "$awk_func"
+    else
+        zfsbak_list_util $1 | awk -F'[@_]' -v id=$2 '{ if (NR==id) print NR"\t"$1"\t\t"$3 }'
+    fi
+}
+
+zfsbak_delete_snap_util() {
+    zfs destroy -r $1
+    echo Destroy $1
+}
+
+zfsbak_create() {
+    round=$2
+    if [ -z $2 ]; then round=12 ; fi
+
+    new_snap="$1@zfsbak_`date -j +%Y-%m-%d-%H:%M:%S`"
+    zfs snapshot -r $new_snap
+    echo Snap $new_snap
+
+    _ci=0
+    zfsbak_list_util_rev $1 | while read name; do
+        _ci=$(( _ci + 1))
+        if [ $_ci -gt $round ]; then 
+            zfsbak_delete_snap_util $name
+        fi
+    done
+}
+
+# args - None
+# args - 1:snap_name, 2...:index
+# args - 1:index
+# args - 1:snap_name
+zfsbak_delete() {
+    shift 1
+    if [ -z $1 ]; then
+        zfsbak_list_util | while read snap; do zfsbak_delete_snap_util $snap; done
+    elif [ $1 -eq $1 ] 2>/dev/null; then
+        zfsbak_delete_snap_util `zfsbak_list_snap_util $1`
+    elif [ -z $2 ]; then
+        zfsbak_list_util $1  | while read snap; do zfsbak_delete_snap_util $snap; done
+    else
+        _snap_arr=`zfsbak_list_util $1`
+        shift 1
+        for i in $@ 
+        do
+            zfsbak_delete_snap_util `shift_util $i $_snap_arr`
+        done
+    fi
+}
+
+zfsbak_export_snap_util() {
+    _zst="`echo $1 | sed 's/\//_/g'`.zst"
+    _aes="$_zst.aes"
+    zfs send -R -c $1 | zstd -q -o $_zst
+    #list_descendants $1 | while read $name; do
+    #    zfs send -c $name | zfs recv $name
+    #done
+    openssl enc -aes256 -pbkdf2 -in $_zst -out $_aes -pass pass:$ZFSBAK_PASS
+    mv $_aes /home/judge
+    rm $_zst
+    echo Export $1 to "/home/judge/$_aes"
+}
+
+zfsbak_export() {
+   _snap_list=`zfsbak_list_util $1`
+    if [ -z $2 ]; then
+        zfsbak_export_snap_util `zfsbak_list_snap_util 1 $1`
+        #list_descendants $1
+    else
+        zfsbak_export_snap_util `zfsbak_list_snap_util $2 $1`
+    fi
+}
+
+# args - 1:filename, 2:dataset
+zfsbak_import() {
+    _snap_tag=`echo $1 | awk -F'@' '{ print $2 }' | awk -F'.' '{ print $1 }'`
+    #_snap_name="$2@$_snap_tag"
+    #if [ -z $_snap_tag ]; then _snap_name=$2; fi
+    zstd -c -d $1 | sudo zfs recv $2
+    #zstd -c -d $1 | sudo zfs recv -d $2
+    echo Import `realpath $1` to $2 
+    return 0
+}
+
+if [ -z "$1" ]; then 
+    echo "$help" 
+    exit 1
+fi
+
+case "$1" in
+    -l|--list)
+        zfsbak_list "$2" "$3"
+        ;;
+    -d|--delete)
+        zfsbak_delete $@
+        ;;
+    -e|--export)
+        zfsbak_export "$2" "$3"
+        ;;
+    -i|--import)
+        zfsbak_import "$2" "$3"
+        ;;
+    *)
+        zfsbak_create "$1" "$2"
+esac
+

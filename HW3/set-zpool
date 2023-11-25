@@ -1,0 +1,7 @@
+#!/bin/sh
+zpool create -m /home/sftp mypool mirror gpt/mypool-1 gpt/mypool-2 mirror gpt/mypool-3 gpt/mypool-4
+zfs create mypool/public
+zfs create mypool/hidden
+zfs create mypool/dev
+zfs set compress=lz4 atime=off mypool/public
+zfs set compress=lz4 atime=off mypool/hidden
