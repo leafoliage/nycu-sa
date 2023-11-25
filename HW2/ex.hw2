@@ -1,0 +1,18 @@
+name: example.hw2
+author: generator
+date: 1696164685
+files:
+  - name: example.txt
+    type: file
+    data: >-
+      TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2NpbmcgZWxpdC4gTWF1cmlzIGVsZWlmZW5kIHNlbSBsZW8sIGlkIHRpbmNpZHVudCBsb3JlbSB2ZW5lbmF0aXMgZWdldC4=
+    hash:
+      md5: 9ce543926bc4f3d67368b58e61fb7710
+      sha-1: 375177a2829947c4cefbf756443c6451daab25e3
+  - name: example2.txt
+    type: hw2
+    data: >-
+      bmFtZTogZXhhbXBsZS5odzIKYXV0aG9yOiBnZW5lcmF0b3IKZGF0ZTogMTY5NjE2NDY4NQpmaWxlczoKICAtIG5hbWU6IGV4YW1wbGUudHh0CiAgICB0eXBlOiBmaWxlCiAgICBkYXRhOiA+LQogICAgICBURzl5WlcwZ2FYQnpkVzBnWkc5c2IzSWdjMmwwSUdGdFpYUXNJR052Ym5ObFkzUmxkSFZ5SUdGa2FYQnBjMk5wYm1jZ1pXeHBkQzRnVFdGMWNtbHpJR1ZzWldsbVpXNWtJSE5sYlNCc1pXOHNJR2xrSUhScGJtTnBaSFZ1ZENCc2IzSmxiU0IyWlc1bGJtRjBhWE1nWldkbGRDND0KICAgIGhhc2g6CiAgICAgIG1kNTogOWNlNTQzOTI2YmM0ZjNkNjczNjhiNThlNjFmYjc3MTAKICAgICAgc2hhLTE6IDM3NTE3N2EyODI5OTQ3YzRjZWZiZjc1NjQ0M2M2NDUxZGFhYjI1ZTMKCg==
+    hash:
+      md5: 9ce543926bc4f3d67368b58e61fb7710
+      sha-1: 375177a2829947c4cefbf756443c6451daab25e3
