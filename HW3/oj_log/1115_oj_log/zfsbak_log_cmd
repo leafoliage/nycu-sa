@@ -1,0 +1,99 @@
+/usr/local/bin/zfsbak mypool/public
+/sbin/zfs get -r -t filesystem compression mypool
+/sbin/zpool status mypool
+/sbin/sysctl kern.geom.label.gptid.enable
+/usr/local/bin/zfsbak -d
+/sbin/zfs get -r -t filesystem atime mypool
+/sbin/zfs list
+/sbin/gpart list
+/bin/ls -al /dev/gpt
+/usr/local/bin/zfsbak -d
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak -l mypool/public
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak mypool/hidden
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak mypool/public 2
+/usr/local/bin/zfsbak mypool/hidden 2
+/usr/local/bin/zfsbak -l
+/usr/local/bin/zfsbak
+/usr/local/bin/zfsbak mypool/public
+/usr/local/bin/zfsbak -l mypool/public
+ENV=ZFSBAK_PASS=sImpleP@ss-sa-2023 ; COMMAND=/usr/local/bin/zfsbak -e mypool/public 3
+/bin/rm -f /home/judge/mypool_public@zfsbak_2023-11-15-23:36:12.zst.aes
+/usr/local/bin/zfsbak -d mypool/public 3
+/usr/local/bin/zfsbak -d
+/sbin/zfs destroy -r mypool/judge-7ab60c9b-eeaf-46fd-98fe-1cecb0c15805
+/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115/secondary-76a386cf-0c8d-4c51-a836-1b0949dae392
+/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115/third-3f0aaa34-0895-42ba-9480-012397a8f1ca
+/usr/local/bin/zfsbak mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+/sbin/zfs destroy -r mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-second-ed06d08c-edb9-457a-b6da-d1f73c6f6bd9
+/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-third-05eb46a0-502b-4836-813a-21568582c03a
+/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-third-05eb46a0-502b-4836-813a-21568582c03a
+/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-second-ed06d08c-edb9-457a-b6da-d1f73c6f6bd9
+/usr/local/bin/zfsbak -l mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/usr/local/bin/zfsbak -l mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc 3
+/sbin/zfs destroy -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+/usr/local/bin/zfsbak -d
+/usr/local/bin/zfsbak -d
+/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d/secondary-b4aae357-4bc6-4961-bb7c-9888f28bdafa
+/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d/third-20f09430-d9f5-48f3-ae7f-c7fc5c26a095
+/usr/local/bin/zfsbak mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/usr/local/bin/zfsbak -d mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/sbin/zfs list -t snapshot -H -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/usr/local/bin/zfsbak -d
+/sbin/zfs destroy -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+/usr/local/bin/zfsbak -d
+/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2/secondary-8eb30981-4c0d-4c4c-875b-9dce2022bbb1
+/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2/third-3b295693-d339-4fc1-acfe-795902b89d27
+/usr/local/bin/zfsbak mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+ZFSBAK_PASS=2023-sa-judge ; COMMAND=/usr/local/bin/zfsbak -e mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2

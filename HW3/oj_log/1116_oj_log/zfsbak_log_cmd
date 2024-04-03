@@ -1,0 +1,33 @@
+/sbin/zfs destroy -r mypool/judge-list-c43a0362-fd8e-4fef-8520-0af768a96f81
+/sbin/zfs create -p mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc
+/sbin/zfs create -p mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc/judge-list-second-9e76152e-0019-44eb-86bb-63c94aeaf084
+/sbin/zfs create -p mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc/judge-list-third-d4988b3a-b725-48e6-a8e3-b269002d7027
+/usr/local/bin/zfsbak mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc
+/usr/local/bin/zfsbak mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc
+/sbin/zfs recv mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc/judge-list-third-d4988b3a-b725-48e6-a8e3-b269002d7027/judge-alpha-fc30744e-a49e-4b09-b22c-340cfe9f1018
+/sbin/zfs send mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc@zfsbak_2023-11-16-20:13:47
+/usr/local/bin/zfsbak -l mypool
+/usr/local/bin/zfsbak -l mypool
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool
+/sbin/zfs destroy -r mypool/judge-list-46ff2b1d-d5de-4fe8-899a-d340e7afb4cc
+/usr/local/bin/zfsbak -d
+/usr/local/bin/zfsbak -d
+/sbin/zfs create -p mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/sbin/zfs create -p mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c/secondary-ae52b8fb-86f6-479f-ae84-a85a9912f81f
+/sbin/zfs create -p mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c/third-66031648-c7c4-4d31-a4ac-1a5d73d5736a
+/usr/local/bin/zfsbak mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/usr/local/bin/zfsbak -d mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/sbin/zfs list -t snapshot -H -r mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/sbin/zfs destroy -r mypool/judge-6aa7fa88-2aa5-48a8-b719-a9822d58ca0c
+/usr/local/bin/zfsbak -d
+/sbin/zfs create -p mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a
+/sbin/zfs create -p mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a/secondary-7b8959fc-53bb-49bf-8b62-57269135f71e
+/sbin/zfs create -p mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a/third-a7b20d9b-2f63-4a0d-9ac8-10721658ba54
+/usr/local/bin/zfsbak mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a
+/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a
+export ZFSBAK_PASS=2023-sa-judge ; COMMAND=/usr/local/bin/zfsbak -e mypool/judge-b0d4f857-1d19-4614-88b6-561dd2c0456a
+/bin/rm -f /tmp/judge.zst
+/usr/local/bin/zfsbak -i /tmp/judge.zst mypool/judge-import-7c8236c1-ef00-4974-9f9c-c0f2583f2f16
+/sbin/zfs recv mypool/judge-import-7c8236c1-ef00-4974-9f9c-c0f2583f2f16@

@@ -1,0 +1,16 @@
+#!/bin/sh
+echo "> ls sftp"
+ls -l /home/sftp
+echo
+echo "> ls sftp/public"
+ls -l /home/sftp/public
+echo
+echo "> ls sftp/hidden"
+ls -l /home/sftp/hidden
+echo
+echo "> ls sftp/dev"
+ls /home/sftp/dev
+echo
+echo "> check sftp_watchd running"
+ps aux | grep sftp_watchd
+service sftp_watchd status

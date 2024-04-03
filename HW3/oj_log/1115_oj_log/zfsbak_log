@@ -1,0 +1,99 @@
+Nov 15 23:34:25 freebsd sudo[1925]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:25 freebsd sudo[1929]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs get -r -t filesystem compression mypool
+Nov 15 23:34:25 freebsd sudo[1936]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zpool status mypool
+Nov 15 23:34:25 freebsd sudo[1994]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/sysctl kern.geom.label.gptid.enable
+Nov 15 23:34:25 freebsd sudo[1999]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:34:25 freebsd sudo[2056]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs get -r -t filesystem atime mypool
+Nov 15 23:34:25 freebsd sudo[2059]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list
+Nov 15 23:34:26 freebsd sudo[2063]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/gpart list
+Nov 15 23:34:26 freebsd sudo[2069]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/bin/ls -al /dev/gpt
+Nov 15 23:34:33 freebsd sudo[2074]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:34:34 freebsd sudo[2133]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:36 freebsd sudo[2197]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:38 freebsd sudo[2264]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:34:40 freebsd sudo[2334]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:42 freebsd sudo[2407]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:43 freebsd sudo[2483]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:34:45 freebsd sudo[2562]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:34:54 freebsd sudo[2637]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:34:54 freebsd sudo[2712]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:55 freebsd sudo[2794]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:34:56 freebsd sudo[2872]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:34:58 freebsd sudo[2957]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:00 freebsd sudo[3047]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:02 freebsd sudo[3138]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:04 freebsd sudo[3233]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:06 freebsd sudo[3328]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:07 freebsd sudo[3423]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:09 freebsd sudo[3518]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:11 freebsd sudo[3613]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:12 freebsd sudo[3708]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:14 freebsd sudo[3803]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:16 freebsd sudo[3898]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:18 freebsd sudo[3993]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:20 freebsd sudo[4088]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:21 freebsd sudo[4183]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:35:23 freebsd sudo[4278]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l mypool/public
+Nov 15 23:35:24 freebsd sudo[4365]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:25 freebsd sudo[4459]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:27 freebsd sudo[4556]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:29 freebsd sudo[4656]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:31 freebsd sudo[4759]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:32 freebsd sudo[4865]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:34 freebsd sudo[4974]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:36 freebsd sudo[5086]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:38 freebsd sudo[5202]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:40 freebsd sudo[5318]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:41 freebsd sudo[5434]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:43 freebsd sudo[5550]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:45 freebsd sudo[5666]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:47 freebsd sudo[5782]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden
+Nov 15 23:35:48 freebsd sudo[5898]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:35:49 freebsd sudo[6006]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:35:50 freebsd sudo[6114]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public 2
+Nov 15 23:35:51 freebsd sudo[6240]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/hidden 2
+Nov 15 23:35:52 freebsd sudo[6336]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l
+Nov 15 23:36:00 freebsd sudo[6384]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak
+Nov 15 23:36:12 freebsd sudo[6393]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/public
+Nov 15 23:36:13 freebsd sudo[6452]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l mypool/public
+Nov 15 23:36:14 freebsd sudo[6503]:    judge : PWD=/usr/home/judge ; USER=root ; ENV=ZFSBAK_PASS=sImpleP@ss-sa-2023 ; COMMAND=/usr/local/bin/zfsbak -e mypool/public 3
+Nov 15 23:36:15 freebsd sudo[6612]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/bin/rm -f /home/judge/mypool_public@zfsbak_2023-11-15-23:36:12.zst.aes
+Nov 15 23:36:16 freebsd sudo[6617]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d mypool/public 3
+Nov 15 23:36:25 freebsd sudo[6669]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:36:26 freebsd sudo[6723]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs destroy -r mypool/judge-7ab60c9b-eeaf-46fd-98fe-1cecb0c15805
+Nov 15 23:36:27 freebsd sudo[6728]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+Nov 15 23:36:28 freebsd sudo[6733]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115/secondary-76a386cf-0c8d-4c51-a836-1b0949dae392
+Nov 15 23:36:28 freebsd sudo[6738]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115/third-3f0aaa34-0895-42ba-9480-012397a8f1ca
+Nov 15 23:36:29 freebsd sudo[6743]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+Nov 15 23:36:30 freebsd sudo[6777]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+Nov 15 23:36:39 freebsd sudo[6786]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs destroy -r mypool/judge-adf5a1a2-43e9-48bf-92e7-3dcade7d0115
+Nov 15 23:36:40 freebsd sudo[6791]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:41 freebsd sudo[6796]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-second-ed06d08c-edb9-457a-b6da-d1f73c6f6bd9
+Nov 15 23:36:42 freebsd sudo[6801]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-third-05eb46a0-502b-4836-813a-21568582c03a
+Nov 15 23:36:43 freebsd sudo[6806]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:43 freebsd sudo[6840]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:45 freebsd sudo[6846]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:46 freebsd sudo[6881]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-third-05eb46a0-502b-4836-813a-21568582c03a
+Nov 15 23:36:47 freebsd sudo[6845]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc/judge-list-second-ed06d08c-edb9-457a-b6da-d1f73c6f6bd9
+Nov 15 23:36:48 freebsd sudo[6961]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:48 freebsd sudo[7000]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:36:49 freebsd sudo[7005]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -l mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc 3
+Nov 15 23:36:50 freebsd sudo[7048]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs destroy -r mypool/judge-list-ae5d8d14-d641-43e9-a294-5bb271c36bfc
+Nov 15 23:37:00 freebsd sudo[7053]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:37:02 freebsd sudo[7086]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:37:03 freebsd sudo[7119]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:03 freebsd sudo[7124]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d/secondary-b4aae357-4bc6-4961-bb7c-9888f28bdafa
+Nov 15 23:37:04 freebsd sudo[7129]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d/third-20f09430-d9f5-48f3-ae7f-c7fc5c26a095
+Nov 15 23:37:05 freebsd sudo[7134]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:05 freebsd sudo[7168]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:06 freebsd sudo[7173]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:07 freebsd sudo[7204]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -H -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:14 freebsd sudo[7209]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:37:16 freebsd sudo[7242]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs destroy -r mypool/judge-16d3a9b6-2ca2-4d34-ba9e-db1067a4e50d
+Nov 15 23:37:17 freebsd sudo[7247]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak -d
+Nov 15 23:37:18 freebsd sudo[7280]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+Nov 15 23:37:18 freebsd sudo[7285]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2/secondary-8eb30981-4c0d-4c4c-875b-9dce2022bbb1
+Nov 15 23:37:19 freebsd sudo[7290]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs create -p mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2/third-3b295693-d339-4fc1-acfe-795902b89d27
+Nov 15 23:37:20 freebsd sudo[7295]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/usr/local/bin/zfsbak mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+Nov 15 23:37:20 freebsd sudo[7329]:    judge : PWD=/usr/home/judge ; USER=root ; COMMAND=/sbin/zfs list -t snapshot -o name,creation -H -r mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2
+Nov 15 23:37:21 freebsd sudo[7334]:    judge : PWD=/usr/home/judge ; USER=root ; ENV=ZFSBAK_PASS=2023-sa-judge ; COMMAND=/usr/local/bin/zfsbak -e mypool/judge-9567e199-f945-4aa3-ba7a-5513afb2a5b2

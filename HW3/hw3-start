@@ -1,0 +1,11 @@
+#!/bin/sh
+zfs set compression=lz4 mypool
+zfs set atime=off mypool
+zfs unmount mypool/public
+zfs mount mypool/public
+zfs unmount mypool/hidden
+zfs mount mypool/hidden
+zfs unmount mypool/dev
+zfs mount mypool/dev
+service syslogd restart
+service sftp_watchd start
